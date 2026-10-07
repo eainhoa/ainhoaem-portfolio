@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | Ainhoa E.M</title>
+  <link rel="icon" type="image/png" href="./img/aemlogoazul.png">
+  <link rel="apple-touch-icon" href="./img/aemlogoazul.png">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Specific styles for the 404 page */
+    .error-page-wrapper {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .error-code-badge {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #78a4cb;
+      background: rgba(120, 164, 203, 0.12);
+      padding: 0.4rem 1.2rem;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(120, 164, 203, 0.25);
+    }
+
+    .error-title-huge {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(5rem, 15vw, 10rem);
+      font-weight: 600;
+      line-height: 0.9;
+      margin: 0;
+      background: linear-gradient(135deg, #2c3e50, #78a4cb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0.85;
+    }
+
+    .error-card {
+      max-width: 580px;
+      margin-top: 2rem;
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      border: 1px solid rgba(120, 164, 203, 0.2);
+    }
+
+    .error-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #1a252f;
+    }
+
+    .error-card p {
+      color: #5a6b7c;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 1.8rem;
+    }
+
+    .mini-game-box {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 1.2rem;
+      margin-bottom: 2rem;
+      border: 1px dashed rgba(120, 164, 203, 0.4);
+      font-size: 0.95rem;
+      color: #475569;
+    }
+
+    .mini-game-box code {
+      background: #e2e8f0;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #1e293b;
+    }
+
+    .error-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .floating-lantern {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 1.5rem auto;
+      filter: drop-shadow(0 8px 16px rgba(120,164,203,0.3));
+      animation: floatLantern 4s ease-in-out infinite;
+    }
+
+    @keyframes floatLantern {
+      0%, 100% { transform: translateY(0px) rotate(-3deg); }
+      50% { transform: translateY(-12px) rotate(3deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MAIN NAVIGATION -->
+  <nav>
+    <a href="index-en.html" class="nav-logo">
+      <img src="./img/logoazul.png" alt="AEM Logo" class="nav-logo-img">
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index-en.html#proyectos">Projects</a></li>
+        <li><a href="index-en.html#sobre-mi">About me</a></li>
+        <li><a href="index-en.html#servicios">Specialties</a></li>
+        <li><a href="index-en.html#contacto">Contact</a></li>
+      </ul>
+      <div class="lang-switch">
+        <a href="404.html">ES</a>
+        <span>|</span>
+        <a href="404-en.html" class="active">EN</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 404 MAIN CONTENT -->
+  <main class="error-page-wrapper">
+    <div class="error-code-badge">Error 404 — Lost Route</div>
+    
+    <img src="./img/iconlantern.png" alt="Lantern Maze Icon" class="floating-lantern">
+
+    <h1 class="error-title-huge">404</h1>
+
+    <div class="error-card">
+      <h2>You've wandered into the maze!</h2>
+      <p>
+        Looks like this page got lost in the <i>Lantern Maze</i> or hasn't been rendered yet. Not even a React Hook or a Firestore query can locate this link.
+      </p>
+
+      <div class="mini-game-box">
+         <strong>Developer Tip:</strong><br>
+        <code>if (page == null) { return <a href="index-en.html">GoBackHome()</a>; }</code>
+      </div>
+
+      <div class="error-actions">
+        <a href="index-en.html" class="btn btn-primary">Back to Home</a>
+        <a href="index-en.html#proyectos" class="btn">View Projects</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Ainhoa E.M — Even the best routes have a bug or two.</p>
+  </footer>
+
+</body>
+</html>

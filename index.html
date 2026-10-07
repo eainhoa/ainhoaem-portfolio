@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ainhoa E.M — Full Stack Developer & Designer</title>
+  <link rel="icon" type="image/png" href="./img/aemlogoazul.png">
+  <link rel="apple-touch-icon" href="./img/aemlogoazul.png">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Hoja de Estilos Externa -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <nav>
+    <a href="#" class="nav-logo">
+     <img src="./img/logoazul.png" alt="AEM Logo" class="nav-logo-img">
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#servicios">Especialidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="lang-switch">
+        <a href="#" class="active">ES</a>
+        <span>|</span>
+        <a href="index-en.html">EN</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER / HERO -->
+  <header class="hero-container">
+    <div class="hero-content">
+      <span class="subtitle-label">Desarrollo & Diseño Digital</span>
+      <h1>Ainhoa E.M <br><i>Software, Design & AI</i></h1>
+      <p class="bio">
+        Desarrolladora de aplicaciones móviles y productos digitales. Combino la lógica de programación en React Native con mi formación en diseño gráfico y el uso de flujos asistidos por Inteligencia Artificial.
+      </p>
+      <div class="contact-bar">
+        <a href="#contacto" class="btn btn-primary">Contacto</a>
+        <a href="https://www.linkedin.com/in/ainhoaem" target="_blank" class="btn">LinkedIn</a>
+      </div>
+    </div>
+    <div class="hero-avatar-wrapper">
+      <img src="./img/profile.jpg" alt="Ainhoa E.M" class="hero-avatar">
+    </div>
+  </header>
+
+  <!-- PROYECTOS DESTACADOS -->
+  <section id="proyectos" class="reveal">
+    <h2 class="section-title">Proyectos</h2>
+    <div class="grid-2">
+     
+      <!-- MISTI -->
+      <div class="card project-card">
+        <div>
+          <div class="project-header">
+            <img src="./img/iconmisti.png" alt="Logo Misti" class="project-logo">
+            <div>
+              <span class="card-category">Aplicación Móvil</span>
+              <h3>Misti</h3>
+            </div>
+          </div>
+          <p>Red social orientada a conexiones a ciegas. Implementación de matchmaking en tiempo real con Firestore, chat y gestión de audios.</p>
+          <div class="tags">
+            <span class="tag">React Native</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Expo Audio</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://apps.apple.com/es/app/misti/id6782328166" target="_blank" class="btn btn-store">
+            <svg class="store-icon" viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-13.8 69.5-34.3z"/></svg>
+            App Store
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.eainhoam.misti" target="_blank" class="btn btn-store">
+            <svg class="store-icon" viewBox="0 0 512 512" fill="currentColor"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l220.7-221.3 60.1 60.1L104.6 499z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+
+      <!-- LANTERN MAZE -->
+      <div class="card project-card">
+        <div>
+          <div class="project-header">
+            <img src="./img/iconlantern.png" alt="Logo Lantern Maze" class="project-logo">
+            <div>
+              <span class="card-category">Videojuego 2D Mobile</span>
+              <h3>Lantern Maze</h3>
+            </div>
+          </div>
+          <p>Juego de exploración interactiva desarrollado en React Native. Lógica de generación de mapas, control de estado e integración de sistemas de monetización.</p>
+          <div class="tags">
+            <span class="tag">React Native</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">AdMob / IAP</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://apps.apple.com/es/app/lantern-maze/id6813588997" target="_blank" class="btn btn-store">
+            <svg class="store-icon" viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-13.8 69.5-34.3z"/></svg>
+            App Store
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" class="reveal">
+    <h2 class="section-title">Sobre mí</h2>
+    <div class="about-box">
+      <div class="about-text">
+        <p>
+          Mi trayectoria une la base visual del <strong>Diseño Gráfico </strong> con el desarrollo técnico de <strong>Software Frontend y Mobile</strong>. Esta combinación me permite liderar el ciclo de vida completo de un producto: desde el diseño de la interfaz en Figma hasta la arquitectura de código y publicación en producción.
+        </p>
+        <p>
+          Tengo experiencia directa diseñando y desarrollando aplicaciones nativas como <strong>Misti</strong> o <strong>Lantern Maze</strong> con <strong>React Native</strong>. Además, mi experiencia como analista de datos e IA en <strong>TELUS Digital</strong> me permite integrar asistentes de Inteligencia Artificial en mi flujo diario para acelerar el prototipado, depurar código y optimizar procesos.
+        </p>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <h4>Ubicación</h4>
+          <p>Zarautz, España</p>
+        </div>
+        <div class="highlight-item">
+          <h4>Idiomas</h4>
+          <p>Español (Nativo)<br>Euskera (Nativo)<br>Inglés (C1 Advanced)</p>
+        </div>
+        <div class="highlight-item">
+          <h4>Enfoque</h4>
+          <p>Mobile Apps & UI/UX Design</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS / ESPECIALIDADES -->
+  <section id="servicios" class="reveal">
+    <h2 class="section-title">Especialidades</h2>
+    <div class="grid-3">
+      <div class="card">
+        <div>
+          <span class="card-category">Móvil & Multiplataforma</span>
+          <h3>Desarrollo de Apps</h3>
+          <p>Desarrollo de aplicaciones nativas para iOS y Android con React Native. Estructura de código limpia, consumo de APIs REST/Firebase y rendimiento fluido.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div>
+          <span class="card-category">Diseño & UI/UX</span>
+          <h3>Diseño Web</h3>
+          <p>Creación de interfaces de usuario funcionales e intuitivas. Prototipado en Figma y maquetación web responsiva adaptada a estándares actuales.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div>
+          <span class="card-category">Flujos modernos</span>
+          <h3>Asistencia por IA & Tools</h3>
+          <p>Uso práctico de modelos de lenguaje e Inteligencia Artificial para acelerar fases de desarrollo, depurar código y optimizar tareas del día a día.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK TÉCNICO -->
+  <section id="stack" class="reveal">
+    <h2 class="section-title">Herramientas & Entornos</h2>
+    <div class="skills-grid">
+     
+      <div class="skill-item">
+        <span class="skill-category">Lenguaje principal</span>
+        <span class="skill-name">JavaScript (ES6+)</span>
+        <span class="skill-desc">Base lógica para algoritmos, gestión de estado y desarrollo funcional en proyectos web y mobile.</span>
+      </div>
+
+      <div class="skill-item">
+        <span class="skill-category">Desarrollo Móvil</span>
+        <span class="skill-name">React Native / Expo</span>
+        <span class="skill-desc">Utilizado para construir y publicar las apps reales <i>Misti</i> y <i>Lantern Maze</i> en iOS y Android.</span>
+      </div>
+
+      <div class="skill-item">
+        <span class="skill-category">Backend & Cloud</span>
+        <span class="skill-name">Firebase Suite</span>
+        <span class="skill-desc">Firestore en tiempo real para bases de datos de usuarios, almacenamiento de archivos y autenticación.</span>
+      </div>
+
+      <div class="skill-item">
+        <span class="skill-category">Diseño & UI/UX</span>
+        <span class="skill-name">Figma & Adobe CC</span>
+        <span class="skill-desc">Creación de sistemas de diseño, bocetos, prototipos de interfaz y recursos gráficos vectoriales.</span>
+      </div>
+
+      <div class="skill-item">
+        <span class="skill-category">Maquetación Web</span>
+        <span class="skill-name">HTML5 / CSS3</span>
+        <span class="skill-desc">Construcción de sitios web dinámicos, maquetación adaptativa (responsive) y arquitectura SEO.</span>
+      </div>
+
+      <div class="skill-item">
+        <span class="skill-category">Optimización AI</span>
+        <span class="skill-name">Prompt Engineering</span>
+        <span class="skill-desc">Integración de asistentes de IA para generación, optimización de código y análisis de datos en TELUS.</span>
+      </div>
+
+      <div class="skill-item">
+        <span class="skill-category">Monetización App</span>
+        <span class="skill-name">AdMob & IAP</span>
+        <span class="skill-desc">Integración de compras in-app y red de anuncios intersticiales para la monetización de videojuegos.</span>
+      </div>
+
+      <div class="skill-item">
+        <span class="skill-category">Control de Versiones</span>
+        <span class="skill-name">Git & GitHub</span>
+        <span class="skill-desc">Gestión de código fuente, control de cambios e historial de versiones en flujos de desarrollo.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="reveal">
+    <h2 class="section-title">Contacto</h2>
+    <div class="contact-box">
+      <h3>¿Hablamos sobre algún proyecto o puesto?</h3>
+      <p>Estoy disponible para incorporar mi perfil a equipos de desarrollo, colaborar en proyectos de diseño/mobile o responder cualquier consulta en: <strong>eainhoam@gmail.com</strong>.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; align-items: center;">
+        <a href="mailto:eainhoam@gmail.com" class="btn btn-primary">Enviar email directo</a>
+        <a href="AinhoaEtxeberria_cv.pdf" target="_blank" class="btn">Descargar CV (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Ainhoa E.M</p>
+  </footer>
+<!-- SCRIPT PARA ACTIVAR LAS ANIMACIONES DE SCROLL -->
+  <script>
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.reveal');
+      const windowHeight = window.innerHeight;
+      
+      reveals.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const revealPoint = 100;
+        
+        if (elementTop < windowHeight - revealPoint) {
+          element.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,530 @@
+:root {
+  --bg: #F9E8A2;             /* Amarillo crema pastel (Fondo general) */
+  --surface: #ffffff;       /* Blanco puro (Tarjetas e interior) */
+  --card-bg: #fffcf0;       /* Fondo ligero secundario */
+  --primary: #78A4CB;       /* Azul medio (Botones principales, acentos) */
+  --primary-hover: #5e8bb3;
+  --accent: #5b81a4;        /* Azul de contraste (Subtítulos y etiquetas) */
+  --border: #B4E1EB;        /* Azul menta claro (Bordes y separadores) */
+  --border-highlight: #95BDD7;
+  --text: #2c3e50;          /* Azul marino oscuro (Texto principal de alta legibilidad) */
+  --text-muted: #576d82;    /* Azul grisáceo (Texto secundario) */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  padding: 0 2rem 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV NAVEGACIÓN FIJA */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(249, 232, 162, 0.92);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-logo-img {
+  height: 38px; /* Ajusta la altura de las letras del logo */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo-img:hover {
+  transform: scale(1.05); /* Ligero micro-interacción al pasar el ratón */
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* SELECTOR DE IDIOMA */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: var(--surface);
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+
+.lang-switch a {
+  text-decoration: none;
+  color: var(--text-muted);
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.lang-switch a.active {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.lang-switch span {
+  color: var(--border);
+}
+
+/* HEADER / HERO */
+.hero-container {
+  padding: 4rem 0 3rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-avatar-wrapper {
+  flex-shrink: 0;
+}
+
+/* FOTO DE PERFIL CON FORMATO DE TARJETA ESTANTERÍA */
+.hero-avatar {
+  width: 190px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(120, 164, 203, 0.15);
+  background-color: var(--surface);
+}
+
+.subtitle-label {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.01em;
+}
+
+h1 i {
+  font-weight: 400;
+  color: var(--primary);
+}
+
+.bio {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 750px;
+  margin-bottom: 2.2rem;
+  font-weight: 300;
+}
+
+.contact-bar {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* BOTONES GENERALES */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.75rem 1.4rem;
+  border-radius: 30px;
+  text-decoration: none;
+  border: 1px solid var(--border-highlight);
+  transition: all 0.25s ease;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  gap: 0.4rem;
+}
+
+.btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: #ffffff;
+}
+
+/* SECCIONES Y TARJETAS */
+section {
+  padding: 4.5rem 0 1.5rem 0;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(120, 164, 203, 0.08);
+}
+
+.card:hover {
+  border-color: var(--border-highlight);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(120, 164, 203, 0.2);
+}
+
+/* LOGO INTEGRADO EN LA CABECERA DE LA TARJETA */
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.project-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 10px rgba(120, 164, 203, 0.12);
+  flex-shrink: 0;
+}
+
+.card-category {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+  display: block;
+}
+
+.card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  background: #f0f8ff;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  font-weight: 500;
+}
+
+/* BOTONES DE TIENDAS Y TARJETAS */
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+.card-actions .btn {
+  padding: 0.55rem 0.95rem;
+  font-size: 0.78rem;
+}
+
+.store-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* SECCIÓN SOBRE MÍ */
+.about-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+.about-text p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  font-weight: 300;
+}
+
+.about-highlights {
+  border-left: 1px solid var(--border);
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight-item h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+.highlight-item p {
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* HERRAMIENTAS Y ENTORNOS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.skill-item {
+  background: var(--surface);
+  padding: 1.3rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: border-color 0.2s ease;
+}
+
+.skill-item:hover {
+  border-color: var(--border-highlight);
+}
+
+.skill-category {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.skill-name {
+  font-size: 1rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.skill-desc {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  line-height: 1.4;
+  margin-top: 0.2rem;
+}
+
+/* SECCIÓN CONTACTO */
+.contact-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+}
+
+.contact-box h3 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.contact-box p {
+  color: var(--text-muted);
+  max-width: 550px;
+  margin: 0 auto 1.5rem auto;
+  font-weight: 300;
+}
+
+/* FOOTER */
+footer {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .hero-container { flex-direction: column-reverse; text-align: center; gap: 2rem; }
+  .bio { margin-left: auto; margin-right: auto; }
+  .contact-bar { justify-content: center; }
+  .grid-3, .grid-2, .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-box { grid-template-columns: 1fr; gap: 2rem; }
+  .about-highlights { border-left: none; padding-left: 0; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+}
+
+@media (max-width: 680px) {
+  body { padding: 0 1.2rem 2rem 1.2rem; }
+  h1 { font-size: 2.4rem; }
+  .grid-3, .grid-2, .skills-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
+
+/* --- EFECTOS "PRO" Y MOVIMIENTO SUTIL --- */
+
+/* 1. Animación suave de flotación para la imagen de perfil */
+@keyframes floatProfile {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.hero-avatar {
+  animation: floatProfile 6s ease-in-out infinite;
+}
+
+/* 2. Efecto de aparición al hacer Scroll (Scroll Reveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 3. Brillo y pulso suave en los botones principales */
+.btn-primary {
+  box-shadow: 0 4px 14px rgba(120, 164, 203, 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(120, 164, 203, 0.5);
+}
